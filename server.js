@@ -5,6 +5,9 @@ const app = express();
 const port = 1106;
 const URL = 'localhost';
 
+// middleware
+app.use(express.static('public'));
+
 app.get('/', (request, response) => {
     // response.json({}) questa è una scorciatoia di quella sotto
     response
