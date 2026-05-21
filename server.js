@@ -19,8 +19,13 @@ app.get('/', (request, response) => {
         ])
 });
 
-app.get('/bacheca', (request, response) => {
-    response.json({ posts })
+app.get(`/bacheca`, (request, response) => {
+    response.json(posts.map(post => {
+        return {
+            ...post,
+            img: `http://${URL}:${port}/bacheca/${post.img}`,
+        }
+    }));
 });
 
 app.get('/prova-query', (request, response) => {
@@ -37,7 +42,7 @@ app.get('/prova-query', (request, response) => {
     response.json({
         valore: param2
     })
-})
+});
 
 app.listen(port, (error) => {
     if (error) {
