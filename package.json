@@ -4,10 +4,11 @@
   "description": "",
   "main": "server.js",
   "scripts": {
-    "start": "node --env.file=.env server.js"
+    "start": "node --env-file=.env server.js",
+    "watch": "node --watch --env-file=.env server.js"
   },
   "keywords": [],
-  "author": "",
+  "author": "Simone Palmisciano",
   "license": "ISC",
   "packageManager": "pnpm@10.33.3",
   "type": "module",
