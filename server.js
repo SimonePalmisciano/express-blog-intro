@@ -18,6 +18,22 @@ app.get('/', (request, response) => {
 
 app.get('/bacheca', (request, response) => {
     response.json({ posts })
+});
+
+app.get('/prova-query', (request, response) => {
+    const queryString = request.query; // qui ci siamo presi i parametri 
+    // che vengono passati tramite query string, quindi queryString sarà un oggetto
+    // con i parametri
+    const { param2 } = queryString; // qui abbiamo fatto il destructuring
+    // quindi al posto di param2 ci potrebbe essere qualsiasi cosa gli abbiamo 
+    // passato nell'url es: http://localhost:1106/prova-query?param2=ciao
+    // param2 dichiarato sorpa avrà come valore 'ciao';
+
+    console.log(queryString);
+
+    response.json({
+        valore: param2
+    })
 })
 
 app.listen(port, (error) => {
@@ -26,4 +42,4 @@ app.listen(port, (error) => {
     } else {
         console.log('server in ascolto sulla porta ' + port);
     }
-})
+});
