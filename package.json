@@ -1,0 +1,20 @@
+{
+  "name": "express-blog-intro",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "start": "node --env.file=.env server.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "packageManager": "pnpm@10.33.3",
+  "type": "module",
+  "dependencies": {
+    "@langchain/anthropic": "^1.4.0",
+    "cowsayjs": "^2.0.0",
+    "express": "^5.2.1",
+    "langchain": "^1.4.1"
+  }
+}
